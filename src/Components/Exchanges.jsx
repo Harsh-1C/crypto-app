@@ -7,7 +7,7 @@ import ExchangeCard from "./ExchangeCard";
 import Error from "./Error";
 
 const Exchanges = () =>{
-
+    const k = 10;
     const [exchanges, setExchanges] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
