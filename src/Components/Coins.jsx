@@ -44,10 +44,9 @@ const Coins = () =>{
     if(error) return <Error msg={"Error while fetching coins"}/>
 
     return (
-        <Container maxW={"container.xl"} >
-            <HStack flexWrap={"wrap"}>
-            {loading?<Loader />:(<>
-               
+        <Container maxW={"container.xl"}>
+            <HStack flexWrap={"wrap"}  >
+                     
             <RadioGroup value={currency} onChange={setCurrency}>
                         <HStack spacing={"4"} p={"8"}>
                             <Radio value={"inr"}>INR</Radio>
@@ -55,8 +54,15 @@ const Coins = () =>{
                             <Radio value={"eur"}>EURO</Radio>
                         </HStack>
             </RadioGroup>
+            {loading?<Loader />:(<>
+          
            
-            <HStack wrap={"wrap"} justifyContent={"space-evenly"}>
+            <HStack wrap={"wrap"} justifyContent={"space-evenly"} overflowY={"auto"} height={"70vh"}
+            css={{
+                "&::-webkit-scrollbar" :{
+                    display: "none",
+                  }
+            }}>
             {
                 coins.map(item => <CoinsCard  
                     id = {item.id}
@@ -71,7 +77,11 @@ const Coins = () =>{
                }
             </HStack>
 
-            <HStack overflowX={"auto"} w={"full"} p={8}>
+           
+
+             </>)
+        }
+             <HStack overflowX={"auto"} w={"90%"} p={8} m={"auto"}>
                {
                 btns.map((item, ind)=>(
                     <Button bgColor={"blackAlpha.900"} color={"white"} onClick={()=>changePage(ind+1)}>
@@ -81,10 +91,6 @@ const Coins = () =>{
                 }
                 
             </HStack> 
-
-             </>)
-        }
-
             </HStack>
        
         

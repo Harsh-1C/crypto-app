@@ -32,7 +32,12 @@ const Exchanges = () =>{
 
     return (
         <Container maxW={"container.xl"} >
-            <HStack justifyContent={"space-evenly"} flexWrap={"wrap"}>
+            <HStack overflowY={"auto"} h={"90vh"} justifyContent={"space-evenly"} flexWrap={"wrap"}
+            css={{
+                "&::-webkit-scrollbar" :{
+                    display: "none",
+                  }
+            }}>
             {loading?<Loader />:(<>
                {
                 exchanges.map(item => <ExchangeCard  {...item} key = {item.id}/>)

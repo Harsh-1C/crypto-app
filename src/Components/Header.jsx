@@ -6,9 +6,9 @@ import logo from "../Assets/logo.png"
 
 const Header = () =>{
     return (
-       <HStack p={"4"} shadow={"md"} bgColor={"blackAlpha.900"} >
+       <HStack position={"sticky"} top={"1px"} p={"4"} shadow={"lg"} bgColor={"blackAlpha.900"}  >
         <Link to="/">
-            <Image src={logo} w={"10"} h={"10"} objectFit={"contain"} alt={"logo"} mx={"4"}/>
+            <Image src={logo} top={"10px"} w={"10"} h={"10"} objectFit={"contain"} alt={"logo"} mx={"4"}/>
         </Link>
             <Button variant={"unstyled"} color={"white"}>
                 <Link to={"/"}>Home</Link>
