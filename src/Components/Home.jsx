@@ -1,4 +1,4 @@
-import { Box, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import imgSrc from "../Assets/logo.png"
 import {motion} from "framer-motion";
